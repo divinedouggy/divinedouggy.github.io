@@ -1,0 +1,44 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+
+.field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: limegreen;
+    flex-grow: 1;
+    
+}
+
+#rows{
+    display: flex;
+    flex-direction: column;
+ 
+   
+}
+
+.row{
+    display: flex;
+    flex-direction: rows;
+
+   
+}
+
+
+.field .square{
+    display: flex;
+    height: 200px;
+    width: 250px;
+    border: solid 1px;
+    font-size: 40px;
+    background-color: rgb(91, 70, 0);
+}
