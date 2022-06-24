@@ -1,4 +1,6 @@
-
+*{
+    cursor: default;
+}
 
 
  /* Old flexbox code 
@@ -65,7 +67,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
 
    
 }
@@ -75,10 +77,11 @@ body, html{
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: aquamarine;
+    background-color: springgreen;
     /* background-image: url(images/background.png); */
     background-size:cover;
     background-position: center;
+    position: absolute;
     image-rendering: optimizeSpeed;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
@@ -87,21 +90,26 @@ body, html{
     -ms-interpolation-mode: bicubic;
     overflow: hidden;
     
+    
+    
   }
 
 #startbox{
-
+    margin-top: 40px;
     width: 66em;
     height: 26em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: solid 5px;
+    border: solid 10px;
     border-radius: 20px;
     background-color: brown;
     padding: 50px;
-  
+    transition: 1s;
+    transition-timing-function: ease-out;
+    z-index: 10;
+   
 }
 
 
@@ -143,30 +151,147 @@ button {
 
 button:hover{
     border: solid 6px;
-    transition: all .1s ease-in-out;
+    transition: .1s;
+    transition-timing-function: linear;
     transform: scale(1.2);
 }
 
+h2{
+    margin:0;
+
+    font-size: 50px;
+    background-color: white;
+    padding: .5em;
+    transition: all 1s;
+    transition-timing-function: linear;
+    opacity: 0%;
+  
 
 
+}
 
+h3{
+    position: absolute;
+    top: 200px;
+    right: 150px;
+    font-size: 90px;
+    font-family: Impact, fantasy;
+    z-index: 9;
+}
+
+#moleholes{
+    position: absolute;
+    background-image: url(images/mole-holes.png);
+    margin-left: 665px;
+  
+    height:inherit;
+    width:inherit;
+    background-repeat: no-repeat;
+    z-index: 7;
+    pointer-events: none;
+   
+}
+/* 
+.holegaps{
+    position: absolute;
+    background-image: url(images/holegaps.png);
+    background-position: 0px -228px;
+    top:229px;
+    opacity: 50%;
+    height: 60px;
+    width: 870px;
+    background-repeat: no-repeat;
+    z-index: 2;
+    
+} */
+
+
+.block{
+    position: absolute;
+    background-image: url(images/block.png);
+ 
+    margin-left: 665px;
+  
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    z-index: 3;
+    pointer-events: none;
+    /* needs to be lower than block 2 */
+    
+}
+
+.block2{
+    position: absolute;
+    background-image: url(images/block2.png);
+ 
+    margin-left: 665px;
+  
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    z-index: 4;
+    pointer-events: none;
+    
+}
+
+.block3{
+    position: absolute;
+    background-image: url(images/block3.png);
+ 
+    margin-left: 665px;
+  
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    
+}
+
+.grass{
+    position: absolute;
+    background-image: url(images/backgrounded.png);
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: 5;
+    pointer-events: none;
+}
 
 
 .mole {
     position: absolute;
     background-image: url(images/mole.png);
     background-position: center;
+    margin-top: 15%;
     width: 201px;
     height: 214px;
     top: 222px;
     left: 667px;
-    /* transition: top 2s, left 2s;  
-    transition-timing-function: linear;  */
+    transition: height 2s;  
+    transition-timing-function: linear; 
     background-repeat: no-repeat;
-  }
+  } 
+
+.mole.pop{
+    height: 214px;
+    transition:.5s;
+    margin-top: 5%;
+    transition-property: margin-top;
+   
+}
 
 .mole.dead{
-    background-position:bottom;
+
+    background-position:center;
     background-image: url(images/dead3.png);
+    margin-top: 350px;
+    opacity: 0%;
+    transition: margin-top 1s .3s, opacity .5s .4s;
+
+   
 
 }
+
