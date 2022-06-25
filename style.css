@@ -165,6 +165,8 @@ h2{
     transition: all 1s;
     transition-timing-function: linear;
     opacity: 0%;
+    z-index: 9;
+    pointer-events: none;
   
 
 
@@ -285,11 +287,12 @@ h3{
 
 .mole.dead{
 
-    background-position:center;
+    background-position:top;
     background-image: url(images/dead3.png);
     margin-top: 350px;
-    opacity: 0%;
-    transition: margin-top 1s .3s, opacity .5s .4s;
+  
+    transition: margin-top 1s .3s, transform .1s;
+    transform: scale(1, .8);
 
    
 
